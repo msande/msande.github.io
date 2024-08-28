@@ -12,13 +12,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
-    <script>
-        gtag('event', 'my_page_load', {
-            'id': '123'
-        });
-    </script>
 </head>
 <body>
-    
+    <button id="test">Test</button>
+    <script>
+       
+        function track() {
+             debugger;
+             gtag('event', 'my_page_load', {
+                 'test_id': '123'
+             });
+         }
+         debugger;
+         var btn = document.getElementById('test');
+         btn.addEventListener('click', track);
+         
+     </script>
 </body>
 </html>
